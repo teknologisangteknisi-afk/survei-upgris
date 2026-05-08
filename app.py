@@ -17,7 +17,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="main-header">🎓 Survei Dinamika Mahasiswa UPGRIS</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">🎓 Survei Dinamika Mahasiswa </div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-text">Bantu kami memetakan tingkat stres dan kebahagiaan mahasiswa di pertengahan semester ini.</div>', unsafe_allow_html=True)
 
 with st.form("kampus_form"):
