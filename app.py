@@ -40,7 +40,7 @@ with st.form("kampus_form"):
                         "Jalan-jalan random tengah malam / cari jajan manis 🛵🍦", 
                         "Scroll sosmed doang sampai ketiduran 😴"))
                         
-    inisial = st.text_input("4. Jujur, ada nggak inisial nama seseorang di UPGRIS yang lagi jadi penyemangat kamu saat ini? (Tulis inisial/kosongkan)")
+    inisial = st.text_input("4. Jujur, ada nggak inisial nama seseorang yang lagi jadi penyemangat kamu saat ini? (Tulis inisial/kosongkan)")
     
     submit = st.form_submit_button("Kirim Survei 🚀")
 
